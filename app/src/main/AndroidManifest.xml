@@ -33,6 +33,15 @@
                 android:value=".MainActivity" />
         </activity>
 
+        <!-- [START firebase_service] -->
+        <service android:name=".fcm.MyFirebaseMessagingService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+
     </application>
 
 </manifest>
